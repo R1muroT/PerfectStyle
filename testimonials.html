@@ -344,6 +344,38 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+	webhookUrl: 'https://juanpruebas.app.n8n.cloud/webhook/51bf3401-33c0-492d-ae01-7ddcdf8627ae/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Holaa! 👋',
+		'Mi nombre es BotStyle, en qué puedo ayudarte?'
+	],
+	i18n: {
+		en: {
+			title: 'Holaa! 👋',
+			subtitle: "¿Qué estilo prefieres el día de hoy?",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Escribe tu pregunta..',
+		},
+	},
+});
+</script>
 
 </body>
 
